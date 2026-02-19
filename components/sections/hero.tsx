@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="photo-section-bg">
         <img
-          src="/hero-bg.png"
+          src="/hero-bg.jpg"
           alt=""
           role="presentation"
           className="w-full h-full object-cover"

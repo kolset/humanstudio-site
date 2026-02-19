@@ -6,7 +6,7 @@ export default function Community() {
       {/* Background image */}
       <div className="photo-section-bg">
         <img
-          src="/community-bg.png"
+          src="/community-bg.jpg"
           alt=""
           role="presentation"
           className="w-full h-full object-cover"

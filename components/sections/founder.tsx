@@ -6,7 +6,7 @@ export default function Founder() {
       {/* Background image */}
       <div className="photo-section-bg">
         <img
-          src="/studio-bg.png"
+          src="/studio-bg.jpg"
           alt=""
           role="presentation"
           className="w-full h-full object-cover"
