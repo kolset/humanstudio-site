@@ -41,6 +41,14 @@ export const products: Product[] = [
   },
   {
     number: "05",
+    name: "TELL MY LIFE STORY",
+    description:
+      "Turn your life into a book. AI-guided interviews that capture your story, chapter by chapter.",
+    tag: "AI Memoir",
+    url: "https://tellmylifestory.com",
+  },
+  {
+    number: "06",
     name: "NOMADSMAP",
     description:
       "The field guide for digital nomads. Real data, real places, no fluff.",
