@@ -1,32 +1,25 @@
-"use client";
-
-import { Reveal } from "@/components/reveal";
-import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/products";
+import ProductCard from "@/components/product-card";
+import Reveal from "@/components/reveal";
 
-export function Products() {
+export default function Products() {
   return (
-    <section className="relative px-6 py-32 md:py-48">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-black py-24 sm:py-32 md:py-40 px-6 sm:px-12 md:px-20">
+      <div className="max-w-6xl mx-auto">
         <Reveal>
-          <p className="font-sans text-[11px] font-medium tracking-[0.35em] uppercase text-[#C4956A]">
-            What We Build
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <h2 className="mt-4 font-serif text-[clamp(2rem,4vw,3rem)] text-[#F5F0E8]">
-            Five Products, One Mission
+          <h2
+            className="font-[family-name:var(--font-display)] text-offwhite leading-none tracking-wide mb-12 sm:mb-16"
+            style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+          >
+            PROJECTS
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {products.map((product, i) => (
-            <ProductCard
-              key={product.name}
-              product={product}
-              delay={0.08 * i}
-            />
+            <Reveal key={product.number} delay={i * 100}>
+              <ProductCard product={product} />
+            </Reveal>
           ))}
         </div>
       </div>

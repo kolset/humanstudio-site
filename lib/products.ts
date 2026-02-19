@@ -1,39 +1,50 @@
 export interface Product {
+  number: string;
   name: string;
-  tagline: string;
+  description: string;
+  tag: string;
   url: string;
-  index: string;
 }
 
 export const products: Product[] = [
   {
-    name: "Headleap",
-    tagline: "Personal OS for a better life",
-    url: "https://headleap.app",
-    index: "01",
+    number: "01",
+    name: "6AM CLUB",
+    description:
+      "A morning ritual community. Wake up, show up, build discipline together.",
+    tag: "Community",
+    url: "https://www.6pmcollective.com/protocol.html",
   },
   {
-    name: "Pledge It",
-    tagline: "Social challenge app",
-    url: "https://getpledge.it",
-    index: "02",
+    number: "02",
+    name: "FAILFORWARD",
+    description:
+      "Angel investing in founders who move fast and break things. Backing conviction over consensus.",
+    tag: "Investing",
+    url: "https://failforward.no",
   },
   {
-    name: "Tell My Life Story",
-    tagline: "AI-powered memoir creation",
-    url: "https://tellmylifestory.com",
-    index: "03",
-  },
-  {
-    name: "6am Collective",
-    tagline: "Morning accountability community for financial goals",
+    number: "03",
+    name: "FOUNDERS SPORT CLUB",
+    description:
+      "Where founders compete off-screen. Sport as the operating system for high performance.",
+    tag: "Sports",
     url: "#",
-    index: "04",
   },
   {
-    name: "Founders Sports Club",
-    tagline: "Where founders compete",
-    url: "#",
-    index: "05",
+    number: "04",
+    name: "MOON LANDER",
+    description:
+      "A retro arcade game. Built for fun, shipped for nostalgia.",
+    tag: "Game",
+    url: "https://moon-lander-sandy.vercel.app",
+  },
+  {
+    number: "05",
+    name: "NOMADSMAP",
+    description:
+      "The field guide for digital nomads. Real data, real places, no fluff.",
+    tag: "Guide",
+    url: "https://nomadsmap.co",
   },
 ];

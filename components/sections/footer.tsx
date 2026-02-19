@@ -1,43 +1,44 @@
-import { products } from "@/lib/products";
-
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="border-t border-[rgba(245,240,232,0.06)] px-6 py-16">
-      <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          {/* Left */}
-          <div>
-            <p className="font-serif text-xl text-[#F5F0E8]">Human Studio</p>
-            <p className="mt-2 text-sm text-[#6B6560]">Austin, TX</p>
-          </div>
-
-          {/* Product links */}
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {products.map((product) => {
-              const isExternal = product.url.startsWith("http");
-              return (
-                <a
-                  key={product.name}
-                  href={product.url}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  className="text-sm text-[#6B6560] transition-colors duration-300 hover:text-[#C4956A]"
-                >
-                  {product.name}
-                </a>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="mt-12 flex items-center justify-between border-t border-[rgba(245,240,232,0.04)] pt-8">
-          <p className="text-xs text-[#6B6560]/60">
-            &copy; {new Date().getFullYear()} Human Studio Austin LLC
+    <footer className="bg-black border-t border-offwhite/10 py-12 sm:py-16 px-6 sm:px-12 md:px-20">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+          <p className="font-[family-name:var(--font-display)] text-offwhite text-2xl tracking-wider">
+            HUMAN STUDIO
           </p>
-          <div className="mx-8 hidden h-px flex-1 bg-gradient-to-r from-transparent via-[rgba(245,240,232,0.04)] to-transparent sm:block" />
-          <p className="text-xs text-[#6B6560]/60">Technology for humans.</p>
+          <p className="text-midgray text-sm mt-1">Austin, Texas</p>
         </div>
+        <div className="flex gap-8">
+          <a
+            href="https://www.linkedin.com/in/torsteinj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-midgray hover:text-offwhite text-xs tracking-[0.2em] uppercase transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://x.com/tkolset"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-midgray hover:text-offwhite text-xs tracking-[0.2em] uppercase transition-colors"
+          >
+            X
+          </a>
+          <a
+            href="mailto:torstein.kolset@gmail.com"
+            className="text-midgray hover:text-offwhite text-xs tracking-[0.2em] uppercase transition-colors"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto mt-10">
+        <hr className="rule-thin" />
+        <p className="text-midgray/50 text-xs mt-6 tracking-wider">
+          &copy; {new Date().getFullYear()} Human Studio Austin. All rights
+          reserved.
+        </p>
       </div>
     </footer>
   );

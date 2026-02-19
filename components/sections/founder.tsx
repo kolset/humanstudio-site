@@ -1,56 +1,75 @@
-"use client";
+import Reveal from "@/components/reveal";
 
-import { Reveal } from "@/components/reveal";
-
-export function Founder() {
+export default function Founder() {
   return (
-    <section className="relative px-6 py-32 md:py-48">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex flex-col items-start gap-12 md:flex-row md:items-center md:gap-20">
-          {/* Photo placeholder */}
-          <Reveal direction="left">
-            <div className="relative h-44 w-44 flex-shrink-0 overflow-hidden rounded-full border border-[rgba(196,149,106,0.12)]">
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(circle at 40% 35%, #1a1816 0%, #0e0d0c 100%)",
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-3xl text-[#C4956A]/25">
-                  TK
-                </span>
-              </div>
+    <section className="photo-section min-h-[80vh]">
+      {/* Background image */}
+      <div className="photo-section-bg">
+        <img
+          src="/studio-bg.png"
+          alt=""
+          role="presentation"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Dark overlay */}
+      <div
+        className="photo-section-overlay"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.3) 100%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="photo-section-content px-6 sm:px-12 md:px-20 py-24 sm:py-32">
+        <div className="max-w-5xl mx-auto">
+          <Reveal>
+            <p className="text-offwhite/50 text-sm tracking-[0.3em] uppercase mb-4">
+              Founder
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <h2
+              className="font-[family-name:var(--font-display)] text-offwhite leading-[0.9] tracking-wide"
+              style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
+            >
+              TJ KOLSET
+            </h2>
+          </Reveal>
+          <Reveal delay={200}>
+            <p className="text-offwhite/70 text-base sm:text-lg md:text-xl max-w-lg mt-8 leading-relaxed">
+              Founder, CTO, board member, angel investor. I make things for
+              humans. Based in Austin, Texas — originally from Norway.
+            </p>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="flex gap-8 mt-8">
+              <a
+                href="https://www.linkedin.com/in/torsteinj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-offwhite/50 hover:text-offwhite text-sm tracking-[0.2em] uppercase transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://x.com/tkolset"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-offwhite/50 hover:text-offwhite text-sm tracking-[0.2em] uppercase transition-colors"
+              >
+                X / Twitter
+              </a>
+              <a
+                href="mailto:torstein.kolset@gmail.com"
+                className="text-offwhite/50 hover:text-offwhite text-sm tracking-[0.2em] uppercase transition-colors"
+              >
+                Email
+              </a>
             </div>
           </Reveal>
-
-          {/* Text */}
-          <div>
-            <Reveal delay={0.1}>
-              <p className="font-sans text-[11px] font-medium tracking-[0.35em] uppercase text-[#C4956A]">
-                Founder
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <h2 className="mt-3 font-serif text-[clamp(1.8rem,3vw,2.5rem)] text-[#F5F0E8]">
-                TJ Kolset
-              </h2>
-            </Reveal>
-
-            <Reveal delay={0.25}>
-              <p className="mt-1.5 text-[13px] text-[#6B6560]">Austin, TX</p>
-            </Reveal>
-
-            <Reveal delay={0.35}>
-              <p className="mt-6 max-w-lg text-[17px] leading-[1.75] text-[#B8B0A2]">
-                Builder, not just founder. Obsessed with the intersection of
-                technology and human potential. Building five products
-                simultaneously because the best ideas don&apos;t wait in line.
-              </p>
-            </Reveal>
-          </div>
         </div>
       </div>
     </section>

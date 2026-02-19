@@ -1,52 +1,39 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, ReactNode } from "react";
 
-interface RevealProps {
-  children: React.ReactNode;
-  delay?: number;
-  direction?: "up" | "down" | "left" | "right";
-  className?: string;
-  once?: boolean;
-}
-
-const directionOffset = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: -40, y: 0 },
-  right: { x: 40, y: 0 },
-};
-
-export function Reveal({
+export default function Reveal({
   children,
-  delay = 0,
-  direction = "up",
   className = "",
-  once = true,
-}: RevealProps) {
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "-80px" });
 
-  const offset = directionOffset[direction];
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => el.classList.add("visible"), delay);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: offset.x, y: offset.y }}
-      animate={
-        isInView
-          ? { opacity: 1, x: 0, y: 0 }
-          : { opacity: 0, x: offset.x, y: offset.y }
-      }
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.25, 0.4, 0.25, 1],
-      }}
-      className={className}
-    >
+    <div ref={ref} className={`reveal ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }

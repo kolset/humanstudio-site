@@ -1,43 +1,60 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-body",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Human Studio — Technology for Humans",
+  title: "Human Studio Austin",
   description:
-    "A tech studio in Austin, TX building five products that make a positive difference for humans.",
+    "Building for humans. A studio by TJ Kolset — founder, CTO, board member, angel investor.",
+  keywords: [
+    "TJ Kolset",
+    "Torstein Kolset",
+    "Human Studio",
+    "Austin",
+    "founder",
+    "CTO",
+    "angel investor",
+  ],
+  authors: [{ name: "TJ Kolset" }],
   openGraph: {
-    title: "Human Studio — Technology for Humans",
-    description:
-      "A tech studio in Austin, TX building five products that make a positive difference for humans.",
     type: "website",
+    title: "Human Studio Austin",
+    description:
+      "Building for humans. A studio by TJ Kolset.",
+    siteName: "Human Studio Austin",
+    locale: "en_US",
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@tkolset",
+    creator: "@tkolset",
+    title: "Human Studio Austin",
+    description: "Building for humans. A studio by TJ Kolset.",
+  },
+  robots: "index, follow",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${playfair.variable} ${outfit.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
