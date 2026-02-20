@@ -49,6 +49,14 @@ export const products: Product[] = [
   },
   {
     number: "06",
+    name: "MY YEAR IN REVIEW",
+    description:
+      "An AI-powered weekly interview that captures your year as it happens. Reflect, review, remember.",
+    tag: "AI Interview",
+    url: "#",
+  },
+  {
+    number: "07",
     name: "NOMADSMAP",
     description:
       "The field guide for digital nomads. Real data, real places, no fluff.",
