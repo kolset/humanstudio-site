@@ -29,7 +29,7 @@ export default function Hero() {
             className="hero-title font-[family-name:var(--font-display)] text-offwhite text-center leading-[0.85] tracking-[0.04em]"
             style={{ fontSize: "15vw" }}
           >
-            HUMAN
+            ALIVE
             <br />
             STUDIO
           </h1>

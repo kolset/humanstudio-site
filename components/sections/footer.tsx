@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div>
           <p className="font-[family-name:var(--font-display)] text-offwhite text-2xl tracking-wider">
-            HUMAN STUDIO
+            ALIVE STUDIO
           </p>
           <p className="text-midgray text-sm mt-1">Austin, Texas</p>
         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto mt-10">
         <hr className="rule-thin" />
         <p className="text-midgray/50 text-xs mt-6 tracking-wider">
-          &copy; {new Date().getFullYear()} Human Studio Austin. All rights
+          &copy; {new Date().getFullYear()} Alive Studio Austin. All rights
           reserved.
         </p>
       </div>

@@ -27,7 +27,7 @@ export default function Philosophy() {
 
         <Reveal delay={200}>
           <p className="text-midgray text-base sm:text-lg md:text-xl max-w-2xl mt-10 sm:mt-14 leading-relaxed">
-            Human Studio is a product studio in Austin, Texas. We make software,
+            Alive Studio is a product studio in Austin, Texas. We make software,
             communities, and experiences that serve the human.
             No dark patterns. No engagement traps. Just things worth using.
           </p>

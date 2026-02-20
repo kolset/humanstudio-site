@@ -16,13 +16,13 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Human Studio Austin",
+  title: "Alive Studio Austin",
   description:
     "Building for humans. A studio by TJ Kolset — founder, CTO, board member, angel investor.",
   keywords: [
     "TJ Kolset",
     "Torstein Kolset",
-    "Human Studio",
+    "Alive Studio",
     "Austin",
     "founder",
     "CTO",
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
   authors: [{ name: "TJ Kolset" }],
   openGraph: {
     type: "website",
-    title: "Human Studio Austin",
+    title: "Alive Studio Austin",
     description:
       "Building for humans. A studio by TJ Kolset.",
-    siteName: "Human Studio Austin",
+    siteName: "Alive Studio Austin",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     site: "@tkolset",
     creator: "@tkolset",
-    title: "Human Studio Austin",
+    title: "Alive Studio Austin",
     description: "Building for humans. A studio by TJ Kolset.",
   },
   robots: "index, follow",
