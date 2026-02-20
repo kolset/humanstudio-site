@@ -57,6 +57,14 @@ export const products: Product[] = [
   },
   {
     number: "07",
+    name: "PLEDGE IT",
+    description:
+      "The social challenge app. Make pledges, stay accountable, compete with friends.",
+    tag: "Social",
+    url: "https://getpledge.it",
+  },
+  {
+    number: "08",
     name: "NOMADSMAP",
     description:
       "The field guide for digital nomads. Real data, real places, no fluff.",
