@@ -3,12 +3,15 @@ import Reveal from "@/components/reveal";
 export default function Community() {
   return (
     <section className="photo-section min-h-[80vh]">
-      {/* Background image */}
+      {/* Background video */}
       <div className="photo-section-bg">
-        <img
-          src="/community-bg.jpg"
-          alt=""
-          role="presentation"
+        <video
+          src="/community-bg.mp4"
+          poster="/community-bg.jpg"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
       </div>

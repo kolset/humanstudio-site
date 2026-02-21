@@ -3,12 +3,15 @@ import Reveal from "@/components/reveal";
 export default function Hero() {
   return (
     <section className="photo-section min-h-screen">
-      {/* Background image */}
+      {/* Background video */}
       <div className="photo-section-bg">
-        <img
-          src="/hero-bg.jpg"
-          alt=""
-          role="presentation"
+        <video
+          src="/hero-bg.mp4"
+          poster="/hero-bg.jpg"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
       </div>

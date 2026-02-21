@@ -3,12 +3,15 @@ import Reveal from "@/components/reveal";
 export default function Founder() {
   return (
     <section className="photo-section min-h-[80vh]">
-      {/* Background image */}
+      {/* Background video */}
       <div className="photo-section-bg">
-        <img
-          src="/studio-bg.jpg"
-          alt=""
-          role="presentation"
+        <video
+          src="/studio-bg.mp4"
+          poster="/studio-bg.jpg"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
       </div>
